@@ -4,7 +4,7 @@ LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 .PHONY: test clean
 
 exec: main.cpp
-	g++ $(CFLAGS) -o space_shooter main.cpp $(LDFLAGS)
+	g++ $(CFLAGS) -o space_shooter main.cpp app.cpp $(LDFLAGS)
 
 test: exec
 	./space_shooter
